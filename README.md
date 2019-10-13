@@ -2,7 +2,7 @@
 
 # GamePascal&trade; for Windows
 Game Development System<br/><br/>
-[![Chat on Discord](https://img.shields.io/discord/574777650762219541.svg?logo=discord)](https://discord.gg/tcGxFat)
+[![Chat on Discord](https://img.shields.io/discord/574777650762219541)](https://discord.gg/tcGxFat)
 [![License](https://img.shields.io/badge/License-GamePascal-blue.svg)](LICENSE.md)
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Follow)](https://twitter.com/tinybiggames)
 <br/><br/><br/><br/><br/><br/><br/><br/>
