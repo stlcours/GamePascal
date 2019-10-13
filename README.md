@@ -5,7 +5,6 @@ Game Development System<br/><br/>
 [![Chat on Discord](https://img.shields.io/discord/574777650762219541)](https://discord.gg/tcGxFat)
 [![License](https://img.shields.io/badge/License-GamePascal-blue.svg)](LICENSE.md)
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Follow)](https://twitter.com/tinybiggames)
-<br/><br/><br/><br/><br/><br/><br/><br/>
 ## Overview
 GamePascal™ Game Development System is a modern, modular, object oriented programming language based on a Object Pascal, a light-weight IDE (GamePascal Edit) and an advanced 2D game library (GamePascal Library) for Windows® PC. The engine uses Direct3D®/OpenGL® for hardware accelerated rendering. It's robust, designed for easy use and suitable for making all types of 2D games and other graphic simulations. There is support for surfaces, textures, sprites, audio, streams, archives, configuration files, render targets, swap chains, databases and much more.
 ## Language Features
