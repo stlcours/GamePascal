@@ -1,2 +1,2 @@
-# GamePascal
-GamePascal Game Development System
+# GamePascal&trade; for Windows
+Game Development System
