@@ -18,13 +18,9 @@ GamePascal™ Game Development System is a modern, modular, object oriented prog
 * All calling conventions register, pascal, cdecl, stdcall, safecall are supported.
 * Delphi 7+ level feature support.
 ## IDE Features
-* Using Notepad++ for the IDE (until a proper one can be developed)
-* Compile (Shft+F9)
-* Compile/Run (F9)
-* Context Help (F1)
+* Using PSPad for the IDE (until a proper one can be developed)
+* Compile/Run (Shft+F9)
 * Dark theme
-* Snippets, Favorites, Task List and Take Notes plugins included
-* Common code snippets defined
 * Double click to goto error/warning line
 ## Engine Features
 * Uses Direct3D/OpenGL for 2D hardware rendering.
