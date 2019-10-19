@@ -7,7 +7,7 @@ Game Development System<br/><br/>
 ![Twitter Follow](https://img.shields.io/twitter/follow/tinyBigGAMES?style=social)
 <br/><br/><br/><br/><br/>
 ## Overview
-GamePascal™ Game Development System is a modern, modular, object oriented programming language based on Object Pascal, a light-weight IDE (GamePascal Edit) and an advanced 2D game library (GamePascal Library) for Windows® PC. The engine uses Direct3D®/OpenGL® for hardware accelerated rendering. It's robust, designed for easy use and suitable for making all types of 2D games and other graphic simulations. There is support for surfaces, textures, sprites, audio, streams, archives, configuration files, render targets, swap chains, databases and much more.
+GamePascal™ Game Development System is a modern, modular, object oriented programming language based on Object Pascal and an advanced 2D game library (GamePascal Library) for Windows® PC. The engine uses Direct3D®/OpenGL® for hardware accelerated rendering. It's robust, designed for easy use and suitable for making all types of 2D games and other graphic simulations. There is support for surfaces, textures, sprites, audio, streams, archives, configuration files, render targets, swap chains, databases and much more.
 ## Language Features
 * GamePascal language is modern, modular, object oriented and based on the Object Pascal.
 * Namespaces, nested classes, inheritance
@@ -16,12 +16,12 @@ GamePascal™ Game Development System is a modern, modular, object oriented prog
 * Conditional compilation. 
 * Direct calling dll-defined routines. 
 * All calling conventions register, pascal, cdecl, stdcall, safecall are supported.
-* Delphi 7+ level feature support.
-## IDE Features
-* Using PSPad for the IDE (until a proper one can be developed)
-* Compile/Run (Shft+F9)
-* Dark theme
-* Double click to goto error/warning line
+## Compiler Features
+* Command-line compiler (gpc.exe)
+* x86 32bit code generation.
+* Create standard EXEs and DLLs.
+* Add version information and EXE icon.
+* Fast compilation speeds, compiling and linking in single step.
 ## Engine Features
 * Uses Direct3D/OpenGL for 2D hardware rendering.
 * Uses 32bit surfaces and textures.
@@ -56,5 +56,4 @@ GamePascal™ Game Development System is a modern, modular, object oriented prog
 * Run GPE.EXE in {installdir\bin} to start the IDE.
 * See examples and documentation for more information on using GamePascal.
 ## Known Issues
-* GPE.EXE will run Notepad++ tweaked to work with GamePascal until a proper IDE has been completed.
 * There are some issues with exception handling. At this time, it is recommend not to use it (try/finally, try/exception).
