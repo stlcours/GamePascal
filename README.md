@@ -21,7 +21,7 @@ GamePascal™ compiler is a modern, modular, object oriented programming languag
 * x86 32bit code generation.
 * Create standard EXEs and DLLs.
 * Add version information and EXE icon.
-* Fast compilation speeds, compiling and linking in single step.
+* Fast compilation speeds, compiling and linking in a single step.
 ## Engine Features
 * Uses Direct3D/OpenGL for 2D hardware rendering.
 * Uses 32bit surfaces and textures.
