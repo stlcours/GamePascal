@@ -17,11 +17,12 @@ GamePascal™ compiler is a modern, modular, object oriented programming languag
 * Direct calling dll-defined routines. 
 * All calling conventions register, pascal, cdecl, stdcall, safecall are supported.
 ## Compiler Features
-* Command-line compiler (gpc.exe)
+* Command-line compiler (gpc.exe <filename.[pas]>)
 * x86 32bit code generation.
 * Create standard EXEs and DLLs.
 * Add version information and EXE icon.
 * Fast compilation speeds, compiling and linking in a single step.
+* Supports project directives ($CONSOLEAPP, $MODULENAME, $EXEICON, $SEARCHPATH, $ENABLERUNTIMETHEMES, $HIGHDPIAWARE, $ADDVERSIONINFO and more). These can be place in the main project source file to direct compiler behavior. The source becomes self-subscribing.
 ## Engine Features
 * Uses Direct3D/OpenGL for 2D hardware rendering.
 * Uses 32bit surfaces and textures.
@@ -53,7 +54,7 @@ GamePascal™ compiler is a modern, modular, object oriented programming languag
 * OpenAL compliant audio card (optional)
 ## Installation
 * Unzip the archive to a desired location.
-* Run GPE.EXE in {installdir\bin} to start the IDE.
+* Run GPC.EXE in {installdir\bin} to compile the source code.
 * See examples and documentation for more information on using GamePascal.
 ## Known Issues
 * There are some issues with exception handling. At this time, it is recommend not to use it (try/finally, try/exception).
