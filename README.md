@@ -1,13 +1,13 @@
 <img align="left" src="https://github.com/tinyBigGAMES/GamePascal/blob/master/logo/GamePascal_256x256.png" width=256>
 
-# GamePascal&trade; for Windows
+# GamePascal&trade; Compiler for Windows
 Game Development System<br/><br/>
 [![Chat on Discord](https://img.shields.io/discord/574777650762219541)](https://discord.gg/tcGxFat)
 [![License](https://img.shields.io/badge/License-GamePascal-blue.svg)](LICENSE.md)
 ![Twitter Follow](https://img.shields.io/twitter/follow/tinyBigGAMES?style=social)
 <br/><br/><br/><br/><br/>
 ## Overview
-GamePascal™ Game Development System is a modern, modular, object oriented programming language based on Object Pascal and an advanced 2D game library (GamePascal Library) for Windows® PC. The library uses Direct3D®/OpenGL® for hardware accelerated rendering. It's robust, designed for easy use and suitable for making all types of 2D games and other graphic simulations. There is support for surfaces, textures, sprites, audio, streams, archives, configuration files, render targets, swap chains, databases and much more.
+GamePascal™ compiler is a modern, modular, object oriented programming language based on Object Pascal and an advanced 2D game library (GamePascal Library) for Windows® PC. The library uses Direct3D®/OpenGL® for hardware accelerated rendering. It's robust, designed for easy use and suitable for making all types of 2D games and other graphic simulations. There is support for surfaces, textures, sprites, audio, streams, archives, configuration files, render targets, swap chains, databases and much more.
 ## Language Features
 * GamePascal language is modern, modular, object oriented and based on the Object Pascal.
 * Namespaces, nested classes, inheritance
