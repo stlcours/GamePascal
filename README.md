@@ -67,3 +67,6 @@ GamePascal™ compiler is a modern, modular, object-oriented programming languag
 ## Known Issues
 * There are some issues with exception handling. At this time, it is recommend not to use it (try/finally, try/exception).
 * Documentation and examples are work-in-progress.
+
+## Media
+![](https://github.com/tinyBigGAMES/GamePascal/blob/master/logo/gp_context_help.gif =250x250)
