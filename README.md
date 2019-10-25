@@ -69,4 +69,4 @@ GamePascal™ compiler is a modern, modular, object-oriented programming languag
 * Documentation and examples are work-in-progress.
 
 ## Media
-https://github.com/tinyBigGAMES/GamePascal/blob/master/logo/gp_context_help.gif
+<img src="https://github.com/tinyBigGAMES/GamePascal/blob/master/logo/gp_context_help.gif" alt="GamePascal IDE" height="620" width="800">
