@@ -1,21 +1,23 @@
 <img align="left" src="https://github.com/tinyBigGAMES/GamePascal/blob/master/logo/GamePascal_256x256.png" width=256>
 
-# GamePascal&trade; Compiler for Windows
+# GamePascal&trade; for Windows
 Game Development System<br/><br/>
 [![Chat on Discord](https://img.shields.io/discord/574777650762219541)](https://discord.gg/tcGxFat)
 [![License](https://img.shields.io/badge/License-GamePascal-blue.svg)](LICENSE.md)
 ![Twitter Follow](https://img.shields.io/twitter/follow/tinyBigGAMES?style=social)
 <br/><br/><br/><br/><br/>
 ## Overview
-GamePascal™ compiler is a modern, modular, object oriented programming language based on Object Pascal and an advanced 2D game library (GamePascal Library) for Windows® PC. The library uses Direct3D®/OpenGL® for hardware accelerated rendering. It's robust, designed for easy use and suitable for making all types of 2D games and other graphic simulations. There is support for surfaces, textures, sprites, audio, streams, archives, configuration files, render targets, databases and much more.
+GamePascal™ compiler is a modern, modular, object-oriented programming language based on Object Pascal, a light-weight IDE and an advanced 2D game library (GamePascal Library) for Windows® PC. The library uses Direct3D®/OpenGL® for hardware accelerated rendering. It's robust, designed for easy use and suitable for making all types of 2D games and other graphic simulations. There is support for surfaces, textures, sprites, audio, streams, archives, configuration files, render targets, databases and much more.
+
 ## Language Features
 * GamePascal language is modern, modular, object oriented and based on the Object Pascal.
 * Namespaces, nested classes, inheritance
 * Static(shared) members, indexed properties, default parameters.
 * Overloaded routines, operator overloading, delegates, exception handling, regular expressions.
-* Conditional compilation. 
-* Direct calling dll-defined routines. 
+* Conditional compilation.
+* Direct calling dll-defined routines.
 * All calling conventions register, pascal, cdecl, stdcall, safecall are supported.
+
 ## Compiler Features
 * Command-line compiler (gpc.exe <filename.[pas]>)
 * x86 32bit code generation.
@@ -23,6 +25,7 @@ GamePascal™ compiler is a modern, modular, object oriented programming languag
 * Add version information and EXE icon.
 * Fast compilation speeds, compiling and linking in a single step.
 * Supports project directives ($CONSOLEAPP, $MODULENAME, $EXEICON, $SEARCHPATH, $ENABLERUNTIMETHEMES, $HIGHDPIAWARE, $ADDVERSIONINFO and more). These can be place in the main project source file to direct compiler behavior. The source becomes self-subscribing.
+
 ## Engine Features
 * Uses Direct3D/OpenGL for 2D hardware rendering.
 * Uses 32bit surfaces and textures.
@@ -48,13 +51,19 @@ GamePascal™ compiler is a modern, modular, object oriented programming languag
 * High-level support for Actors, Entities and AI.
 * Low-level system and common routines.
 * Low-level (reliable UDP) networking.
+
 ## Minimum System Requirements
 * Microsoft Windows 10
 * DirectX 9/OpenGL 3.x
 * OpenAL compliant audio card (optional)
+
 ## Installation
 * Unzip the archive to a desired location.
-* Run GPC.EXE in {installdir\bin} to compile the source code.
-* See examples and documentation for more information on using GamePascal.
+* Run GPE.EXE in {installdir\bin} to start the GamePascal IDE.
+* Inside the root of the [examples] folder are workspace files (.gpw).
+* Each workspace holds projects for different aspects of the product such as language, library, demos, etc.
+* See these examples and documentation for more information on using GamePascal.
+
 ## Known Issues
 * There are some issues with exception handling. At this time, it is recommend not to use it (try/finally, try/exception).
+* Documentation and examples are work-in-progress.

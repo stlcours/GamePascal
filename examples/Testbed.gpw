@@ -1,0 +1,6 @@
+[Active]
+Active=..\examples\testbed\Testbed.pas
+Focus=..\examples\testbed\Testbed.pas
+[Files]
+File0=..\examples\testbed\Testbed.pas
+File1=..\examples\testbed\uTestbed.pas

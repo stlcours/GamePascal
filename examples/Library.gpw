@@ -1,0 +1,8 @@
+[Active]
+Active=..\examples\library\Elastic.pas
+Focus=..\examples\library\Elastic.pas
+[Files]
+File0=..\examples\testbed\uTestbed.pas
+File1=..\examples\common\uCommon.pas
+File2=..\examples\library\Elastic.pas
+File3=..\examples\testbed\Testbed.pas
