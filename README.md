@@ -25,7 +25,27 @@ GamePascal™ compiler is a modern, modular, object-oriented programming languag
 * Add version information and EXE icon.
 * Fast compilation speeds, compiling and linking in a single step.
 * Supports project directives ($CONSOLEAPP, $MODULENAME, $EXEICON, $SEARCHPATH, $ENABLERUNTIMETHEMES, $HIGHDPIAWARE, $ADDVERSIONINFO and more). These can be place in the main project source file to direct compiler behavior. The source becomes self-subscribing.
-
+## IDE Features
+- Multiple Project Support
+- Toggle Code Folding
+- Syntax Highlighting
+- Project Options
+- Single file project format
+- File operations: open, close, close all, save, save all
+- Edit operations: undo, redo, cut, copy, past, select all
+- Search operations: find, find again, find/replace
+- Compile/Compile & Run
+- QuickHelp
+- Param Hints (API Routines)
+- Code Completion (API Routines) (Ctrl+Space)
+- Integrated CHM Help
+- Editor Options (Options->Editor Options)
+- Context sensitive Help (F1) in the editor (place the cursor
+  on a keyword and press F1 or right click).
+- File Tabs with hints
+- Entire game engine API is accessible
+- EXE generation with version info and application icon
+- Todo List (display all //TODO: or {TODO: } tags in current source file)
 ## Engine Features
 * Uses Direct3D/OpenGL for 2D hardware rendering.
 * Uses 32bit surfaces and textures.

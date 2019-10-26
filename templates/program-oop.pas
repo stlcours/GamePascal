@@ -50,7 +50,7 @@ end;
 
 procedure TMyGame.OnShutdown;
 begin
-  inherited;  
+  Display_Close;
 end;
 
 procedure TMyGame.OnDisplayReady(aReady: Boolean);

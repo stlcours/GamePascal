@@ -75,7 +75,6 @@ var
   vp: TRectangle;
 begin
   inherited;
-  
   // open display
   Display_Open(-1, -1, cDisplayWidth, cDisplayHeight, cDisplayFullscreen,
     cDisplayVSync, cDisplayaAntiAlias, cDisplayRenderAPI, 
@@ -112,7 +111,8 @@ end;
 
 procedure TMyGame.OnDisplayReady(aReady: Boolean);
 begin
-  inherited;  
+  inherited;
+  { TODO: Todo test 1 }  
 end;
 
 procedure TMyGame.OnUpdate(aDeltaTime: Single);
@@ -144,7 +144,7 @@ begin
   begin
    FBead[0].Y := (cBeadSize+10)/2;
   end;
-
+  //TODO: Todo test 4
   if FBead[0].Y + ((cBeadSize+10)/2) > FViewHeight then
   begin
    FBead[0].Y := FViewHeight - (cBeadSize+10)/2;
@@ -226,7 +226,7 @@ var
   I: Integer;
 begin
   inherited;
-  
+  {TODO: Todo test 2 }
   Bitmap_Draw(FBmp, 240, 300, nil, @Vector(0.5, 0.5), @Vector(0.26, 0.26), 0, WHITE, False, False);
   
   // draw last bead
@@ -250,5 +250,6 @@ end;
   
 { ---  Main ----------------------------------------------------------------- }
 begin
-  RunGame(TMyGame);    
+  RunGame(TMyGame);
+  // TODO: Todo test 3    
 end.
