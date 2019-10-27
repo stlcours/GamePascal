@@ -1,6 +1,6 @@
 [Active]
 Active=
-Focus=..\examples\library\Video.pas
+Focus=..\examples\library\Font.pas
 [Files]
 File0=..\examples\common\uCommon.pas
 File1=..\examples\library\Elastic.pas
@@ -10,3 +10,7 @@ File4=..\examples\library\Music.pas
 File5=..\examples\library\Scroll.pas
 File6=..\examples\library\TiledBitmap.pas
 File7=..\examples\library\Video.pas
+File8=..\examples\library\Physics.pas
+File9=..\examples\library\Starfield.pas
+File10=..\examples\library\Speech.pas
+File11=..\examples\library\Sounds.pas
