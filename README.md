@@ -38,7 +38,7 @@ GamePascal™ compiler is a modern, modular, object-oriented programming languag
 - QuickHelp
 - Param Hints (API Routines)
 - Code Completion (API Routines) (Ctrl+Space)
-- Integrated CHM Help
+- Integrated HTML Help
 - Editor Options (Options->Editor Options)
 - Context sensitive Help (F1) in the editor (place the cursor
   on a keyword and press F1 or right click).

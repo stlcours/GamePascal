@@ -95,10 +95,9 @@ procedure TBaseGame.OnRenderGUI;
 begin
   SetHudTextPos(3,3,1);
   PrintHudText(GREEN, Align_Left, 12, '%d fps', [Engine_GetFrameRate]);
-  PrintHudText(WHITE, Align_Left, 12, 'Esc - Quit', []);
-  PrintHudText(WHITE, Align_Left, 12, 'F11 - Toggle fullscreen', []);
-  PrintHudText(WHITE, Align_Left, 12, 'Esc - Take screenshot', []);
-
+  PrintHudText(WHITE, Align_Left, 12, 'Esc         - Quit', []);
+  PrintHudText(WHITE, Align_Left, 12, 'F11         - Toggle fullscreen', []);
+  PrintHudText(WHITE, Align_Left, 12, 'Esc         - Take screenshot', []);
 end;
 
 

@@ -55,11 +55,12 @@ type
   { TMyGame }
   TMyGame = class(TBaseGame)
   protected
+    FAvatar: TBitmap;  
+    FFaint : TColor;
     FViewWidth: Single;
     FViewHeight: Single;
     FBead : array[0..cBeadCount] of TBead;
     FTimer: Single;
-    FBmp: TBitmap;  
   public
     procedure OnStartup; override;
     procedure OnShutdown; override;
@@ -79,7 +80,13 @@ begin
   Display_Open(-1, -1, cDisplayWidth, cDisplayHeight, cDisplayFullscreen,
     cDisplayVSync, cDisplayaAntiAlias, cDisplayRenderAPI, 
     cDisplayTitle + 'Elastic Demo');
-
+                    
+  // load avatar
+  FAvatar := Bitmap_Load(Archive, 'arc/textures/avatar.png', nil);
+  
+  // create color to draw a faint avatar in the back ground
+  FFaint := Color_Createf(0.2, 0.2, 0.2, 0.2);     
+    
   // init data    
   FillChar(FBead, SizeOf(FBead), 0);
   
@@ -94,14 +101,12 @@ begin
   Display_GetViewportSize(vp);
   FViewWidth := vp.Width;
   FViewHeight := vp.Height;
-  
-  FBmp := Bitmap_Load(Archive, 'arc/textures/avatar.png', nil);
       
 end;
 
 procedure TMyGame.OnShutdown;
 begin
-  Bitmap_Unload(FBmp);  
+  Bitmap_Unload(FAvatar);  
   Audio_MusicUnload;
   Audio_Close;
   Display_Close;
@@ -227,18 +232,21 @@ var
 begin
   inherited;
   {TODO: Todo test 2 }
-  Bitmap_Draw(FBmp, 240, 300, nil, @Vector(0.5, 0.5), @Vector(0.26, 0.26), 0, WHITE, False, False);
+  Bitmap_Draw(FAvatar, 240, 300, nil, @Vector(0.5, 0.5), @Vector(0.26, 0.26), 
+    0, FFaint, False, False);
   
   // draw last bead
-  Display_DrawFilledRectangle(FBead[0].X, FBead[0].Y, cBeadSize, cBeadSize, GREEN);
-
+  Display_DrawFilledRectangle(FBead[0].X, FBead[0].Y, cBeadSize, cBeadSize,
+    GREEN);
+    
   // loop though other beads
   for I := 1 to cBeadCount do
   begin
     // draw bead and string from it to the one before it
     Display_DrawLine(FBead[i].x+cBedHalfSize, FBead[i].y+cBedHalfSize,
       FBead[i-1].x+cBedHalfSize, FBead[i-1].y+cBedHalfSize, YELLOW, 1);
-    Display_DrawFilledRectangle(FBead[i].X, FBead[i].Y, cBeadSize, cBeadSize, GREEN);
+    Display_DrawFilledRectangle(FBead[i].X, FBead[i].Y, cBeadSize, cBeadSize,
+      GREEN);
   end;
 
 end;
