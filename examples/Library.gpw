@@ -1,6 +1,6 @@
 [Active]
 Active=
-Focus=..\examples\common\uCommon.pas
+Focus=..\examples\library\Polygon.pas
 [Files]
 File0=..\examples\common\uCommon.pas
 File1=..\examples\library\Elastic.pas
@@ -14,3 +14,5 @@ File8=..\examples\library\Physics.pas
 File9=..\examples\library\Starfield.pas
 File10=..\examples\library\Speech.pas
 File11=..\examples\library\Sounds.pas
+File12=..\examples\library\Polygon.pas
+File13=..\examples\library\SpriteCollision.pas

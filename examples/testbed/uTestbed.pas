@@ -13,7 +13,8 @@ type
     FBmp: TBitmap;
     FBmpAngle: Single;
   public
-    procedure OnGetArchiveFilename(var aPassword: string; var aFilename: string);
+    procedure OnGetArchiveFilename(var aPassword: string; var aFilename:
+      string);
       override;
     procedure OnStartup; override;
     procedure OnShutdown; override;

@@ -12,13 +12,15 @@ Bookmark7=-1
 Bookmark8=-1
 Bookmark9=-1
 [Editor]
-CaretPosX=0
-CaretPosY=0
+CaretPosX=20
+CaretPosY=29
 SelectMode=0
-SelStart=0
+SelStart=784
 SelLength=0
 WordWrap=0
 NonPrinted=0
 TopLine=0
 ScrollPosY=0
 ScrollPosX=0
+[Collapsed]
+0=0;715;0;23;0;{$REGION 'Project Directives'}
