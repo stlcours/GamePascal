@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program ProcedureExit2;
 
 uses
   SysUtils,
@@ -30,7 +30,7 @@ uses
 
 procedure Test;
 var
-  s: String;
+  s: string;
 begin
   try
     try
@@ -51,11 +51,11 @@ begin
   WriteLn(10);
   try
     WriteLn(11);
-    Exit; 
+    Exit;
   finally
     WriteLn(12);
-    Con_Pause(CON_LF+'Press any key to continue...');    
-  end; 
+    Con_Pause(CON_LF + 'Press any key to continue...');
+  end;
   WriteLn(13);
-  
+
 end.

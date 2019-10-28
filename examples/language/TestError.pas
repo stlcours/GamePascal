@@ -22,7 +22,6 @@
 
 {$ENDREGION}
 
-
 program TestError;
 
 uses
@@ -34,5 +33,5 @@ var
 begin
   I := 0;
   I := I div I;
-  
+
 end.

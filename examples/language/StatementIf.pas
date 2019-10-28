@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program StatementIf;
 
 uses
   SysUtils,
@@ -38,6 +38,6 @@ end;
 
 begin
   WriteLn(MaxInt(3, 5));
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

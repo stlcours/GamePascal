@@ -22,20 +22,25 @@
 
 {$ENDREGION}
 
-
-library MinMax;
+library TestDLL;
 
 uses
   SysUtils;
 
 function Min(X, Y: Integer): Integer; stdcall;
 begin
-  if X < Y then Min := X else Min := Y;
+  if X < Y then
+    Min := X
+  else
+    Min := Y;
 end;
 
 function Max(X, Y: Integer): Integer; stdcall;
 begin
-  if X > Y then Max := X else Max := Y;
+  if X > Y then
+    Max := X
+  else
+    Max := Y;
 end;
 
 procedure P;

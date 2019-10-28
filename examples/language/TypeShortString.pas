@@ -22,33 +22,33 @@
 
 {$ENDREGION}
 
-program Demo;
+program TypeShortString;
 
 uses
   SysUtils,
   GamePascal;
 
 type
-  T = String[5];
-  
-function GetShortString: T; 
+  T = string[5];
+
+function GetShortString: T;
 begin
   result := 'abc';
 end;
 
-procedure TestShortString(var S: ShortString); 
+procedure TestShortString(var S: ShortString);
 begin
   S := 'xyz';
 end;
 
 var
   S1, S2: ShortString;
-  S: String[4];
-  Q: String;
-  
+  S: string[4];
+  Q: string;
+
 begin
   Q := 'pqr';
-  S1 := 'abc'; 
+  S1 := 'abc';
   S2 := 'pq';
   S := Q + S1 + S2;
   WriteLn(S);
@@ -57,7 +57,7 @@ begin
   WriteLn(S);
   WriteLn(S[1]);
   WriteLn(Length(S));
-  WriteLn(Byte(S[0])); 
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+  WriteLn(Byte(S[0]));
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

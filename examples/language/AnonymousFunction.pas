@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program AnonymousFunction;
 
 uses
   SysUtils,
@@ -31,19 +31,19 @@ uses
 type
   TFuncOfInt<T> = reference to function(x: T): Integer;
 
-function G(z: Word): TFuncOfInt<Integer>;
-begin
-  result := function(x: Integer): Integer
+  function G(z: Word): TFuncOfInt<Integer>;
   begin
-    result := x + z;
+    result := function(x: Integer): Integer
+    begin
+      result := x + z;
+    end;
   end;
-end;
 
 var
   x: TFuncOfInt<Integer>;
 begin
   x := G(3);
   println x(7);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

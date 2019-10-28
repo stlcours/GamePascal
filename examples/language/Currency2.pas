@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program Currency2;
 uses
   SysUtils,
   GamePascal;
@@ -42,7 +42,6 @@ begin
   WriteLn(E);
   S := C;
   WriteLn(S);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
-end.  
- 
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
+end.

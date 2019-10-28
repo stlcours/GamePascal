@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program TypeCast;
 
 uses
   SysUtils,
@@ -37,6 +37,6 @@ begin
   I := Byte(11);
   writeln(I);
   writeln(Byte(12));
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

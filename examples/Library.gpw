@@ -1,6 +1,6 @@
 [Active]
 Active=
-Focus=..\examples\library\Font.pas
+Focus=..\examples\common\uCommon.pas
 [Files]
 File0=..\examples\common\uCommon.pas
 File1=..\examples\library\Elastic.pas

@@ -28,7 +28,7 @@ uses
   SysUtils,
   GamePascal,
   uTestbed;
-  
+
 begin
   RunGame(TMyGame);
 end.

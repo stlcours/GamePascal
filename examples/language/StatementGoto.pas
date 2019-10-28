@@ -22,13 +22,13 @@
 
 {$ENDREGION}
 
-program Demo;
+program StatementGoto;
 
 uses
   SysUtils,
   GamePascal;
 
-Label 
+label
   L;
 var
   I: Integer;
@@ -37,10 +37,11 @@ begin
   repeat
     Inc(I);
     WriteLn(I);
-    if I = 5 then Goto L; 
+    if I = 5 then
+      goto L;
   until false;
   L:
   WriteLn('done');
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

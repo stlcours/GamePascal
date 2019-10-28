@@ -22,15 +22,15 @@
 
 {$ENDREGION}
 
-program Demo;
+program TypeProcedural;
 
 uses
   SysUtils,
   GamePascal;
 
 type
-  TProc = procedure (X: Integer); cdecl;
-  TFunc = function (X, Y: Integer): Integer;
+  TProc = procedure(X: Integer); cdecl;
+  TFunc = function(X, Y: Integer): Integer;
 
 procedure MyProc(X: Integer); cdecl;
 begin
@@ -46,7 +46,7 @@ var
   Proc1, Proc2: TProc;
   Func: TFunc;
   P: Pointer;
-  
+
 begin
   Proc1 := MyProc;
   Proc2 := Proc1;
@@ -61,6 +61,6 @@ begin
   Proc1 := TProc(P);
   Proc1(24);
   TProc(P)(55);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

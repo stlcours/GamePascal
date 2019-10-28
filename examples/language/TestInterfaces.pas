@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Test;
+program TestInterfaces;
 
 uses
   SysUtils,
@@ -31,7 +31,7 @@ uses
 type
 
   IMyInterface = interface(IUnknown)
-  ['{E7AA427A-0F4D-4A96-A914-FAB1CA336337}']
+    ['{E7AA427A-0F4D-4A96-A914-FAB1CA336337}']
     procedure P(X, Y: Integer);
   end;
 
@@ -48,7 +48,7 @@ begin
   WriteLn('Created');
 end;
 
-procedure TMyClass.P(X, Y: Integer); 
+procedure TMyClass.P(X, Y: Integer);
 begin
   WriteLn(Self.ClassName);
   WriteLn(X, ' ', Y);
@@ -68,6 +68,6 @@ begin
   I := X;
   I.P(3, 4);
   X.Free;
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program ProcedureExit;
 
 uses
   SysUtils,
@@ -39,6 +39,6 @@ end;
 begin
   P(true);
   P(false);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

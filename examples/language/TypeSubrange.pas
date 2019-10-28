@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program TypeSubrange;
 
 uses
   SysUtils,
@@ -35,11 +35,11 @@ type
   TSubRangeEnum = one..two;
   TSubRangeChar = 'a'..'z';
 
-var 
+var
   b: TSubrangeBoolean;
   e: TSubrangeEnum;
   c: TSubRangeChar;
-  
+
 begin
   b := true;
   WriteLn(b);
@@ -47,6 +47,6 @@ begin
   WriteLn(Integer(e));
   c := 'h';
   WriteLn(Succ(c));
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

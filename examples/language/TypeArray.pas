@@ -22,20 +22,20 @@
 
 {$ENDREGION}
 
-program Demo;
+program TypeArray;
 
 uses
   SysUtils,
   GamePascal;
 
 type
-  
+
   TMyPoint = record
     X, Y: Single;
-  end; 
-  
+  end;
+
   TMyArray = array[false..true] of TMyPoint;
-  
+
 var
   a: TMyArray;
   b: array['a'..'z'] of Integer;
@@ -44,6 +44,6 @@ begin
   WriteLn(b['s']);
   a[true].Y := 5.5;
   WriteLn(a[true].Y);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

@@ -1,6 +1,7 @@
 ﻿# Changelog
 
 ## Version 2019.1.alpha:
+- Added code formatter (edit menu or right click menu in code editor)
 - Fixed Physics where passing a body type would always select static
 - Added TODO list tab that show all todo: tags in current source file
 - Updated program-oop.pas template file

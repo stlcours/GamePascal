@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program ShortBoolEval;
 
 {$B-}
 
@@ -37,7 +37,7 @@ begin
   X := 1;
   if (X = 4) or (X = 1) or (Y div Z = 0) then
     writeln('ok');
-    
-  Con_Pause(CON_LF+'Press any key to continue...');
-    
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
+
 end.

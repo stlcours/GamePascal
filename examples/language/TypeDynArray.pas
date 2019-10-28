@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program TypeDynArray;
 
 uses
   SysUtils,
@@ -40,6 +40,6 @@ begin
   WriteLn(A[2]);
 
   TestDynarray([10, 20, 30]);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

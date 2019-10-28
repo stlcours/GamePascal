@@ -22,26 +22,26 @@
 
 {$ENDREGION}
 
-program Demo;
+program NestedSubroutines;
 
 uses
   SysUtils,
   GamePascal;
 
-  procedure Outer(X: Integer);
+procedure Outer(X: Integer);
 
-    procedure Inner(P, Q: Double);
-    begin
-      X := X + 10;
-      WriteLn(X, ' ', P, ' ', Q);
-    end;
-
+  procedure Inner(P, Q: Double);
   begin
-    Inner(3, 5.7);
+    X := X + 10;
+    WriteLn(X, ' ', P, ' ', Q);
   end;
 
 begin
+  Inner(3, 5.7);
+end;
+
+begin
   Outer(10);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

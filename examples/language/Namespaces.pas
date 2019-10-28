@@ -22,33 +22,36 @@
 
 {$ENDREGION}
 
-program Demo;
+program Namespaces;
 
 uses
   SysUtils,
   GamePascal;
 
 namespace A
-  procedure G;
-  begin
-    P;
-  end;
-  procedure P;
-  begin
-    WriteLn(123);
-  end;
+
+procedure G;
+begin
+  P;
+end;
+
+procedure P;
+begin
+  WriteLn(123);
+end;
 end;
 
 namespace A
-  procedure V;
-  begin
-    WriteLn('V');
-  end;
+
+procedure V;
+begin
+  WriteLn('V');
+end;
 end;
 
 begin
   A.G;
   A.V;
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

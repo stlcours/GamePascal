@@ -28,11 +28,11 @@ uses
   SysUtils,
   GamePascal,
   uCommon;
-              
+
 const
-  cScreenWidth  = 800;
-  cScreenHeight = 600;  
-  
+  cScreenWidth = 800;
+  cScreenHeight = 600;
+
 type
 
   { TMyGame }
@@ -48,7 +48,7 @@ type
     BodiesCount: Integer;
     Timer: Single;
     procedure ResetBodies;
-    procedure CleanBodies;          
+    procedure CleanBodies;
   public
     procedure OnStartup; override;
     procedure OnShutdown; override;
@@ -56,9 +56,10 @@ type
     procedure OnUpdate(aDeltaTime: Single); override;
     procedure OnRender; override;
     procedure OnRenderGUI; override;
-  end;  
+  end;
 
-{ --- TMyGame --------------------------------------------------------------- }
+  { --- TMyGame --------------------------------------------------------------- }
+
 procedure TMyGame.ResetBodies;
 var
   Body: TPhysicsBody;
@@ -86,7 +87,7 @@ begin
     begin
       Pos := Physics_GetBodyPosition(Body);
       if Pos.Y > cScreenHeight + 100 then
-          Physics_DestroyBody(Body);
+        Physics_DestroyBody(Body);
     end;
     Body := Physics_GetNextBody(Body);
   end;
@@ -95,28 +96,28 @@ end;
 procedure TMyGame.OnStartup;
 begin
   inherited;
-  
+
   // open display
   Display_Open(-1, -1, cScreenWidth, cScreenHeight, cDisplayFullscreen,
-    cDisplayVSync, True, cDisplayRenderAPI, 
+    cDisplayVSync, True, cDisplayRenderAPI,
     cDisplayTitle + 'Physics Demo');
-  
+
   // load avatar
   FAvatar := Bitmap_Load(Archive, 'arc/textures/avatar.png', nil);
-  
+
   // create color to draw a faint avatar in the back ground
   FFaint := Color_Createf(0.2, 0.2, 0.2, 0.2);
-  
+
   Physics_Open;
-  Physics_CreateRectangleBody(PhysicBody_Static, Vector(420,580), 500, 20);
-  Physics_CreateCircleBody(PhysicBody_Static, Vector(420,300), 50);
-  Physics_CreateCircleBody(PhysicBody_Dynamic, Vector(420,50), 50);
-                   
+  Physics_CreateRectangleBody(PhysicBody_Static, Vector(420, 580), 500, 20);
+  Physics_CreateCircleBody(PhysicBody_Static, Vector(420, 300), 50);
+  Physics_CreateCircleBody(PhysicBody_Dynamic, Vector(420, 50), 50);
+
   Audio_Open;
   Audio_MusicLoad(Archive, 'arc/music/Serious_HipHop.ogg');
   Audio_MusicSetLoop(True);
   Audio_MusicSetVolume(0.5);
-  Audio_MusicPlay;       
+  Audio_MusicPlay;
 end;
 
 procedure TMyGame.OnShutdown;
@@ -128,10 +129,10 @@ begin
 
   // destroy avatar
   Bitmap_Unload(FAvatar);
-  
-  // close display  
+
+  // close display
   Display_Close;
-  
+
   inherited;
 end;
 
@@ -145,10 +146,10 @@ var
   size: Integer;
 begin
   inherited;
-               
+
   // get mouse pos
   Mouse_GetInfo(FMousePos);
-  
+
   if Keyboard_Pressed(KEY_1) or Mouse_Pressed(MOUSE_BUTTON_LEFT) then
   begin
     size := Random_Rangei(16, 64);
@@ -165,21 +166,21 @@ begin
   if Keyboard_Pressed(KEY_R) then
   begin
     ResetBodies;
-  end;      
-       
+  end;
+
   Physics_Update;
-  CleanBodies;  
-  
+  CleanBodies;
+
 end;
 
 procedure TMyGame.OnRender;
 begin
   inherited;
 
-  // draw avatar     
-  Bitmap_Draw(FAvatar, cScreenWidth-64, cScreenHeight-64, nil, 
+  // draw avatar
+  Bitmap_Draw(FAvatar, cScreenWidth - 64, cScreenHeight - 64, nil,
     @Vector(0.50, 0.50), @Vector(0.15, 0.15), 0, FFaint, False, False);
-                     
+
   // render all wireframe bodies
   Physics_DrawBodyShapes;
 end;
@@ -187,12 +188,12 @@ end;
 procedure TMyGame.OnRenderGUI;
 begin
   inherited;
-  
+
   PrintHudText(WHITE, Align_Left, 12, 'R           - Reset', []);
   PrintHudText(WHITE, Align_Left, 12, 'LMB/1       - Create Polygon Body', []);
   PrintHudText(WHITE, Align_Left, 12, 'RMB/2       - Create Circle Body', []);
 end;
-  
+
 { ---  Main ----------------------------------------------------------------- }
 begin
   RunGame(TMyGame);

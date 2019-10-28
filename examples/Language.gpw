@@ -1,6 +1,6 @@
 [Active]
 Active=
-Focus=..\examples\language\DLLTest.pas
+Focus=..\examples\language\TypeDynArray.pas
 [Files]
 File0=..\examples\language\AnonymousFunction.pas
 File1=..\examples\language\Currency2.pas

@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program TypeSet;
 
 uses
   SysUtils,
@@ -30,20 +30,20 @@ uses
 
 type
   TMySet = set of byte;
-  
+
 const
-  ConstSet = [6,7] + [2..4];
+  ConstSet = [6, 7] + [2..4];
   EmptySet = [];
-  
+
 var
   S, ASet: TMySet;
   I: Integer = 4;
-  
+
 begin
   S := EmptySet + [1..3];
   ASet := S * [I];
   WriteLn(S <> [1..9]);
   WriteLn(5 in [5]);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

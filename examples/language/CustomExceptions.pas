@@ -22,19 +22,19 @@
 
 {$ENDREGION}
 
-program Demo;
+program CustomExceptions;
 
 uses
   SysUtils,
   GamePascal;
 
 type
- 
- CheckFailed = class(Exception)
- end;
- 
- OtherFailed = class(Exception)
- end;
+
+  CheckFailed = class(Exception)
+  end;
+
+  OtherFailed = class(Exception)
+  end;
 
 begin
   try
@@ -43,10 +43,10 @@ begin
     //raise exception.create('Select check failed');
   except
     on CheckFailed do
-     WriteLn('checkfailed raised');
+      WriteLn('checkfailed raised');
   else
-     WriteLn('other raised');
+    WriteLn('other raised');
   end;
 
-  Con_Pause(CON_LF+'Press any key to continue...');
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

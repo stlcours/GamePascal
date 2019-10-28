@@ -23,7 +23,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program ForwardDeclaration;
 
 uses
   SysUtils,
@@ -49,6 +49,6 @@ end;
 
 begin
   Q;
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

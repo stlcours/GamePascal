@@ -22,32 +22,33 @@
 
 {$ENDREGION}
 
-program Demo;
+program TypeRecord;
 
 uses
   SysUtils,
   GamePascal;
 
 type
-  
+
   TMyRec = record
     Id: Integer;
-    LastName: String[20];
+    LastName: string[20];
     Properties: record
-                  Age: Integer; 
-                  Height: Double;
-                end;
+      Age: Integer;
+      Height: Double;
+    end;
   end;
-  
+
 var
   R: TMyRec;
-  
+
 begin
   R.Id := 101;
   R.LastName := 'Benson';
   R.Properties.Age := 23;
   R.Properties.Height := 1.82;
-  WriteLn(R.Id, ' ', R.LastName, ' ', R.Properties.Age, ' ', R.Properties.Height:4:2);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+  WriteLn(R.Id, ' ', R.LastName, ' ', R.Properties.Age, ' ',
+    R.Properties.Height: 4: 2);
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

@@ -22,24 +22,26 @@
 
 {$ENDREGION}
 
-program Demo;
+program LambdaExpression;
 uses
   SysUtils,
   GamePascal;
 
 type
-  TFuncOfInt = reference to function(x, y: Integer): Integer;
+TFuncOfInt = reference
 
-procedure H(const A: array of Integer; R: TFuncOfInt);
-var
-  I: Integer;
-begin
-  for I in A do
-    PrintLn R(I, 1);
-end;
+to function(x, y: Integer): Integer;
+
+  procedure H(const A: array of Integer; R: TFuncOfInt);
+  var
+    I: Integer;
+  begin
+    for I in A do
+      PrintLn R(I, 1);
+  end;
 
 begin
-  H([10, 20, 30], lambda x, y => x + y);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+  H([10, 20, 30], lambda x, y = > x + y);
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

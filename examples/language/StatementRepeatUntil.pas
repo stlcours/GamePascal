@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program StatementRepeatUntil;
 
 uses
   SysUtils,
@@ -33,9 +33,9 @@ var
 begin
   X := 5.4;
   repeat
-    WriteLn(X:5:2);
+    WriteLn(X: 5: 2);
     X := X - 2.1;
   until X < 0;
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

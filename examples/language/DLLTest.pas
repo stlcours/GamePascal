@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program DLLTest;
 
 uses
   SysUtils,
@@ -30,13 +30,14 @@ uses
 
 const
   cDllName = 'TestDLL.dll';
-  
+
 function Min(X, Y: Integer): Integer; stdcall; external cDllName;
-function Max(X, Y: Integer): Integer; stdcall; external cDllName;  
+
+function Max(X, Y: Integer): Integer; stdcall; external cDllName;
 
 begin
   WriteLn('Min(50, 60): ', Min(50, 60));
   WriteLn('Max(70, 90): ', Max(70, 90));
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

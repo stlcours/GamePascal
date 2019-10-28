@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program NestedRecords;
 
 uses
   SysUtils,
@@ -34,17 +34,16 @@ type
   end;
 
   RRecord = record
-   y: RNested;
+    y: RNested;
   end;
 
-function SetValues : RRecord;
+function SetValues: RRecord;
 begin
   Result.y.x := 1234;
 end;
 
 begin
   WriteLn(SetValues.y.x);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
-end.
 
+  Con_Pause(CON_LF + 'Press any key to continue...');
+end.

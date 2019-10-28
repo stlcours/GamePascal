@@ -22,19 +22,19 @@
 
 {$ENDREGION}
 
-program Test;
+program TestUnit;
 
 uses
   SysUtils,
   GamePascal;
 
-uses 
+uses
   MyUnit;
-  
+
 begin
   WriteLn(I);
   WriteLn(S);
   Proc(123);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

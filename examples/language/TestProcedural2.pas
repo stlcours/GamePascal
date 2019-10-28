@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Test;
+program TestProcedural2;
 
 uses
   SysUtils,
@@ -44,6 +44,6 @@ end;
 
 begin
   CallProc(DoJob);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

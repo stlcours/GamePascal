@@ -7,7 +7,7 @@ interface
 var
   I: Integer = 4;
 
-const 
+const
   S = 'abc';
 
 procedure Proc(X: Integer);
@@ -23,14 +23,14 @@ begin
 end;
 
 initialization
-begin
-  PrintLn('Initialization');
-  I := 10;
-end;
-  
+  begin
+    PrintLn('Initialization');
+    I := 10;
+  end;
+
 finalization
-begin
-  PrintLn('finalization');
-end;
+  begin
+    PrintLn('finalization');
+  end;
 
 end.

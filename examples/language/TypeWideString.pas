@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program TypeWideString;
 
 uses
   SysUtils,
@@ -32,7 +32,7 @@ var
   w: WideChar;
   ws: WideString;
   c: Char;
-  s: String;
+  s: string;
   I: Integer;
   ss: ShortString;
 begin
@@ -66,6 +66,6 @@ begin
   WriteLn(ws);
   ws := #$20AC;
   WriteLn(ws);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

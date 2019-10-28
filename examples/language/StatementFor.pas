@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program StatementFor;
 
 uses
   SysUtils,
@@ -31,11 +31,11 @@ uses
 var
   I: Integer;
 begin
-  for I:=1 to 5 do
+  for I := 1 to 5 do
     WriteLn(I);
-    
-  for I:=5 downto 1 do
+
+  for I := 5 downto 1 do
     WriteLn(I);
-    
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

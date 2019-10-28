@@ -46,6 +46,7 @@ GamePascal™ compiler is a modern, modular, object-oriented programming languag
 - Entire game engine API is accessible
 - EXE generation with version info and application icon
 - Todo List (display all //TODO: or {TODO: } tags in current source file)
+- Code formatter
 ## Engine Features
 * Uses Direct3D/OpenGL for 2D hardware rendering.
 * Uses 32bit surfaces and textures.

@@ -173,6 +173,8 @@ end;
 procedure TMyGame.OnRenderGUI;
 begin
   inherited;
+  PrintHudText(WHITE, Align_Left, 12,'1-7         - Direction', []);
+
 end;
   
 { ---  Main ----------------------------------------------------------------- }

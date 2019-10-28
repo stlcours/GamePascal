@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program StatementWhile;
 
 uses
   SysUtils,
@@ -34,9 +34,9 @@ begin
   X := 2.3;
   while X < 7.6 do
   begin
-    WriteLn(X:5:2);
+    WriteLn(X: 5: 2);
     X := X + 2.1;
   end;
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

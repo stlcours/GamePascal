@@ -22,8 +22,7 @@
 
 {$ENDREGION}
 
-
-program Demo;
+program OverloadedRoutines;
 
 uses
   SysUtils,
@@ -31,23 +30,23 @@ uses
 
 procedure Test(I: Integer; D: Double); overload;
 begin
-  writeln(I:10, D:10:2);
+  writeln(I: 10, D: 10: 2);
 end;
 
-procedure Test(S: String); overload;
+procedure Test(S: string); overload;
 begin
   writeln(S);
 end;
 
 procedure Test(D: Double); overload;
 begin
-  writeln(D:10:2);
+  writeln(D: 10: 2);
 end;
 
 begin
   Test('abc');
   Test(12.3);
   Test(5, 12.3);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Test;
+program TestInterfaces2;
 
 uses
   SysUtils,
@@ -32,44 +32,49 @@ type
 
   IMyPropInterface = interface
     function GetName: string;
-  end; 
+  end;
 
   TMyPropInterface = class
   public
     function GetName: string;
-  end; 
+  end;
 
   TMyClass = class(TInterfacedObject, IMyPropInterface)
   private
     fMyPropInterface: TMyPropInterface;
   public
     constructor Create;
+    destructor Destroy; override;
     property MyPropInterface: TMyPropInterface
       read fMyPropInterface
       write fMyPropInterface
-      implements IMyPropInterface;   
-  end;  
+      implements IMyPropInterface;
+  end;
 
 function TMyPropInterface.GetName: string;
 begin
   result := 'abc';
 end;
-
+                              
 constructor TMyClass.Create;
 begin
-  inherited;
-  MyPropInterface := TMyPropInterface.Create; 
+  inherited;            
+  MyPropInterface := TMyPropInterface.Create;
 end;
 
-var 
+destructor TMyClass.Destroy;
+begin
+  MyPropInterface.Free;
+  inherited;  
+end;
+
+var
   X: TMyClass;
   I: IMyPropInterface;
 begin
   X := TMyClass.Create;
-  I := X;
+  I := X;                        
   WriteLn(I.GetName());
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.
-
-

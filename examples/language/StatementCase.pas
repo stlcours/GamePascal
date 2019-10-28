@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program StatementCase;
 
 uses
   SysUtils,
@@ -34,11 +34,11 @@ begin
   I := 8;
   case I of
     1..5, 77: WriteLn(100);
-    7..9    : WriteLn(200);
+    7..9: WriteLn(200);
   else
     WriteLn(300);
   end;
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
-  
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
+
 end.

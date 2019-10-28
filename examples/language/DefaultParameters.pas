@@ -22,16 +22,16 @@
 
 {$ENDREGION}
 
-program Demo;
+program DefaultParameters;
 
 uses
   SysUtils,
   GamePascal;
 
 procedure Test(X: Integer; S: Single = 12.5; C: Char = 'W';
-  Str: String = 'abc');
+  Str: string = 'abc');
 begin
-  WriteLn(X:10, S:10:2, ' ', C, ' ', Str);
+  WriteLn(X: 10, S: 10: 2, ' ', C, ' ', Str);
 end;
 
 begin
@@ -39,6 +39,6 @@ begin
   Test(5, 5, 'a');
   Test(5, 5);
   Test(5);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');  
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

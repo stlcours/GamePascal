@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program ProcedureBreak;
 
 uses
   SysUtils,
@@ -31,12 +31,13 @@ uses
 var
   I: Integer;
 begin
-  I := 0;  
+  I := 0;
   repeat
     I := I + 1;
-    if I = 5 then Break;
+    if I = 5 then
+      Break;
     WriteLn(I);
   until I = 10;
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program WriteAndWriteln;
 
 uses
   SysUtils,
@@ -36,10 +36,10 @@ begin
   I := 90;
   WriteLn(I);
   WriteLn(true);
-  WriteLn(10.2:10:2);
-  WriteLn('abc':10);
+  WriteLn(10.2: 10: 2);
+  WriteLn('abc': 10);
   WriteLn('d');
-  WriteLn(S:30);
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+  WriteLn(S: 30);
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

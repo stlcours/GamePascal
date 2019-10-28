@@ -28,19 +28,19 @@ uses
   SysUtils,
   GamePascal,
   uCommon;
-             
+
 type
 
   { TMyGame }
   TMyGame = class(TBaseGame)
   protected
     FAvatar: TBitmap;
-    FFaint : TColor;
+    FFaint: TColor;
     FSprite: TSprite;
     FEntity: TEntity;
     FPage: Integer;
     FGroup: Integer;
-    FOrigin: TVector;      
+    FOrigin: TVector;
   public
     procedure OnStartup; override;
     procedure OnShutdown; override;
@@ -48,27 +48,28 @@ type
     procedure OnUpdate(aDeltaTime: Single); override;
     procedure OnRender; override;
     procedure OnRenderGUI; override;
-  end;  
+  end;
 
-{ --- TMyGame --------------------------------------------------------------- }
+  { --- TMyGame --------------------------------------------------------------- }
+
 procedure TMyGame.OnStartup;
 var
   VP: TRectangle;
 begin
   inherited;
-  
+
   // open display
   Display_Open(-1, -1, cDisplayWidth, cDisplayHeight, cDisplayFullscreen,
-    cDisplayVSync, cDisplayaAntiAlias, cDisplayRenderAPI, 
+    cDisplayVSync, cDisplayaAntiAlias, cDisplayRenderAPI,
     cDisplayTitle + 'Entity Demo');
-  
+
   // load bitmaps
   FAvatar := Bitmap_Load(Archive, 'arc/textures/avatar.png', nil);
-                    
+
   // create color to draw a faint avatar in the back ground
-  FFaint := Color_Createf(0.2, 0.2, 0.2, 0.2);     
-  
-  // get viewport size  
+  FFaint := Color_Createf(0.2, 0.2, 0.2, 0.2);
+
+  // get viewport size
   Display_GetViewportSize(VP);
 
   // create sprite object
@@ -93,7 +94,7 @@ begin
   FEntity := Entity_Create(FSprite, FGroup);
 
   // intially center entity on screen
-  Entity_SetPosAbs(FEntity, Vp.Width/2, vp.Height/2);  
+  Entity_SetPosAbs(FEntity, Vp.Width / 2, vp.Height / 2);
 end;
 
 procedure TMyGame.OnShutdown;
@@ -106,10 +107,10 @@ begin
 
   // destrooy avatar
   Bitmap_Unload(FAvatar);
-  
-  // close display  
+
+  // close display
   Display_Close;
-  
+
   inherited;
 end;
 
@@ -121,38 +122,38 @@ end;
 procedure TMyGame.OnUpdate(aDeltaTime: Single);
 begin
   inherited;
-  
-  // get mouse pos             
+
+  // get mouse pos
   Mouse_GetInfo(FMousePos);
-  
+
   // animate entity
   Entity_NextFrame(FEntity);
 
   // rotate and move entity toward mouse position then come to a stop
-  Entity_ThrustToPos(FEntity, 30, 14, MousePos.X, MousePos.Y, 128, 32, 5, 
-    0.001, aDeltaTime);      
-    
+  Entity_ThrustToPos(FEntity, 30, 14, MousePos.X, MousePos.Y, 128, 32, 5,
+    0.001, aDeltaTime);
+
 end;
 
 procedure TMyGame.OnRender;
 begin
   inherited;
-  
-  // draw avatar     
-  Bitmap_Draw(FAvatar, 240, 300, nil, @Vector(0.5, 0.5), @Vector(0.26, 0.26), 
+
+  // draw avatar
+  Bitmap_Draw(FAvatar, 240, 300, nil, @Vector(0.5, 0.5), @Vector(0.26, 0.26),
     0, FFaint, False, False);
-                  
+
   // render entity
-  Entity_Render(FEntity, 0, 0);    
+  Entity_Render(FEntity, 0, 0);
 end;
 
 procedure TMyGame.OnRenderGUI;
 begin
   inherited;
 end;
-  
+
 { ---  Main ----------------------------------------------------------------- }
 begin
   RunGame(TMyGame);
-      
+
 end.

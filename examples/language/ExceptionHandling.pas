@@ -22,7 +22,7 @@
 
 {$ENDREGION}
 
-program Demo;
+program ExceptionHandling;
 
 uses
   SysUtils,
@@ -38,20 +38,20 @@ end;
 
 procedure TestExcept1;
 var
-  S: String;
+  S: string;
   I: Integer;
 begin
   S := 'abc';
   try
     ErrorProc;
   except
-    on E:EDivByZero do
+    on E: EDivByZero do
     begin
       writeln(S);
       S := E.Message;
       writeln(S);
     end;
-    else
+  else
     begin
       writeln(456);
     end;
@@ -60,7 +60,7 @@ end;
 
 procedure TestExcept2;
 var
-  S: String;
+  S: string;
   I: Integer;
 begin
   S := 'abc';
@@ -74,7 +74,7 @@ begin
       //S := E.Message;
       //writeln(S);
     end;
-    else
+  else
     begin
       writeln(456);
     end;
@@ -85,6 +85,6 @@ begin
   //TestExcept;
   TestExcept2;
   WriteLN('ok');
-  
-  Con_Pause(CON_LF+'Press any key to continue...');
+
+  Con_Pause(CON_LF + 'Press any key to continue...');
 end.

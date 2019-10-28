@@ -28,7 +28,7 @@ uses
   SysUtils,
   GamePascal,
   uCommon;
-             
+
 type
 
   { TMyGame }
@@ -36,7 +36,7 @@ type
   protected
     FFaint: TColor;
     FAvatar: TBitmap;
-    FFilename: array [0..4] of string;
+    FFilename: array[0..4] of string;
     FNum: Integer;
     procedure Play(aNum: Integer; aVol: Single);
   public
@@ -46,9 +46,10 @@ type
     procedure OnUpdate(aDeltaTime: Single); override;
     procedure OnRender; override;
     procedure OnRenderGUI; override;
-  end;  
+  end;
 
-{ --- TMyGame --------------------------------------------------------------- }
+  { --- TMyGame --------------------------------------------------------------- }
+
 procedure TMyGame.Play(aNum: Integer; aVol: Single);
 begin
   FNum := aNum;
@@ -61,28 +62,28 @@ end;
 procedure TMyGame.OnStartup;
 begin
   inherited;
-  
+
   // open display
   Display_Open(-1, -1, cDisplayWidth, cDisplayHeight, cDisplayFullscreen,
-    cDisplayVSync, cDisplayaAntiAlias, cDisplayRenderAPI, 
+    cDisplayVSync, cDisplayaAntiAlias, cDisplayRenderAPI,
     cDisplayTitle + 'Entity Demo');
-  
+
   // load avatar
   FAvatar := Bitmap_Load(Archive, 'arc/textures/avatar.png', nil);
-  
+
   // create color to draw a faint avatar in the back ground
   FFaint := Color_Createf(0.2, 0.2, 0.2, 0.2);
-  
+
   // init audio
   Audio_Open;
-  
+
   // init music filenames
   FFilename[0] := 'deliverance.ogg';
   FFilename[1] := 'hitman.ogg';
   FFilename[2] := 'spirit.ogg';
   FFilename[3] := 'opus.ogg';
   FFilename[4] := 'nightflyer.ogg';
-  
+
   // play first song
   Play(0, 1.0);
 end;
@@ -91,16 +92,16 @@ procedure TMyGame.OnShutdown;
 begin
   // unload music
   Audio_MusicUnload;
-  
+
   // close audio
   Audio_Close;
 
   // destroy avatar
   Bitmap_Unload(FAvatar);
-  
-  // close display  
+
+  // close display
   Display_Close;
-  
+
   inherited;
 end;
 
@@ -114,10 +115,10 @@ var
   Vol: Single;
 begin
   inherited;
-               
+
   // get mouse pos
   Mouse_GetInfo(FMousePos);
-  
+
   if Keyboard_Pressed(KEY_1) then
     Play(0, 1.0);
 
@@ -147,31 +148,33 @@ begin
     Vol := Vol + 0.10;
     Clip_Valuef(Vol, 0.0, 1.0, False);
     Audio_MusicSetVolume(Vol);
-  end;      
-    
+  end;
+
 end;
 
 procedure TMyGame.OnRender;
 begin
   inherited;
-  
-  // draw avatar     
-  Bitmap_Draw(FAvatar, 240, 300, nil, @Vector(0.5, 0.5), @Vector(0.26, 0.26), 
+
+  // draw avatar
+  Bitmap_Draw(FAvatar, 240, 300, nil, @Vector(0.5, 0.5), @Vector(0.26, 0.26),
     0, FFaint, False, False);
 end;
 
 procedure TMyGame.OnRenderGUI;
 begin
   inherited;
-  
+
   PrintHudText(WHITE, Align_Left, 12, '1-5         - Music', []);
   PrintHudText(WHITE, Align_Left, 12, 'PgUp/PgDn   - Volume', []);
-  PrintHudText(YELLOW, Align_Left, 12, 'Volume      : %02f', [Audio_MusicGetVolume]);
-  PrintHudText(YELLOW, Align_Left, 12, 'Song        : %s (#%d)', [FFilename[FNum], FNum+1]);
+  PrintHudText(YELLOW, Align_Left, 12, 'Volume      : %02f',
+    [Audio_MusicGetVolume]);
+  PrintHudText(YELLOW, Align_Left, 12, 'Song        : %s (#%d)',
+    [FFilename[FNum], FNum + 1]);
 end;
-  
+
 { ---  Main ----------------------------------------------------------------- }
 begin
   RunGame(TMyGame);
-      
+
 end.
